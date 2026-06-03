@@ -16,8 +16,9 @@ The temperature equation includes the contribution of:
 ```text
   a reaction term,
   a cooling term,
-  a volatilization term, depending on the selected model configuration.
+  a volatilization term, 
 ```
+depending on the selected model configuration.
 
 The fuel fraction evolves according to a temperature-dependent reaction rate.
 
