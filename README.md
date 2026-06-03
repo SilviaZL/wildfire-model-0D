@@ -5,35 +5,55 @@ This repository contains the code used to simulate a spatially homogeneous wildf
 
 # Model description
 The model describes the evolution of two variables:
+
+```text
   T: temperature [K]
   Y: remaining fuel fraction [-]
+```
 
 The temperature equation includes the contribution of:
+
+```text
   a reaction term,
   a cooling term,
   a volatilization term, depending on the selected model configuration.
+```
+
 The fuel fraction evolves according to a temperature-dependent reaction rate.
 
 # Model configuration
 The script allows different model configurations through the following parameters:
+
+```python
   VOLATILIZATION_PRODUCTS = 0   # 0: simplified model, 1: complete model
   COOLING_MODEL = 0             # 0: convection, 1: convection + radiation
+```
+
 The available configurations are:
+
+```text
   Simplified:	constant air density and convective cooling
   Simplified with radiation: constant air density and convective-radiative cooling
   Complete:	temperature-dependent air density and volatilization term
   Complete with radiation:	temperature-dependent air density, volatilization term and radiation
+```
 
 # Output figures
 
 Depending on the selected model configuration, the script generates figures such as:
+
+```text
   figures/ContribucionTerminos_Simplificado.png
   figures/EvolucionTemporal_Simplificado.png
   figures/Trayectoria_EspacioFases_Simplificado.png
   figures/EspacioFases_Simplificado.png
+```
 
 The figures include:
+
+```text
   contribution of the thermal terms,
   temporal evolution of temperature and fuel fraction,
   individual trajectory in phase space,
   phase-space vector field.
+```
